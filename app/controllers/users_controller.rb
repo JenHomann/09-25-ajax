@@ -12,9 +12,9 @@ class UsersController < ApplicationController
     @user = User.new(params[:id])
     
     if @user.save
-      redirect_to_users_path, notice: "You have successfully created a new user."
+      redirect_to_users_paths
     else
-      raise "User could not be saved."
+      render "new"
     end
   end
   
