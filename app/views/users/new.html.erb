@@ -1,3 +1,12 @@
 <h1>This is the new user page</h1>
 
-<p>There will be a form on this page at some point in time. Right now I'm just checking routes, etc.</p>
+<%= form_for @user do |f| %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  
+  <%= f.submit %>
+
+<% end %>

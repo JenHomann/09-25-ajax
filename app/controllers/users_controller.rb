@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
   def index
-    @user = User.all
+    @users = User.all
   end
   
   def new
@@ -9,10 +9,10 @@ class UsersController < ApplicationController
   end
   
   def create
-    @user = User.new(params[:id])
+    @user = User.new(params[:user])
     
     if @user.save
-      redirect_to_users_paths
+      redirect_to users_path
     else
       render "new"
     end

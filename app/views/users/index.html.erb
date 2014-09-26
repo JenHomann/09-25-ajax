@@ -1,1 +1,9 @@
 <h1>This is my user index page</h1>
+
+<ul>
+<% @users.each do |u| %>
+  <li><%= u.name %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to("Create a new user", new_user_path) %></p>
