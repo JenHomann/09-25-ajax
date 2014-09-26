@@ -1,6 +1,9 @@
 <h1>This is my user index page</h1>
 
-<%= link_to("Click to view all users") %>
+<div class="clicker">
+  <%= link_to("Click to view all users") %>
+</div>
+
 <div class="users_list">
   <ul>
   <% @users.each do |u| %>
